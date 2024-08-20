@@ -35,7 +35,6 @@ def test_login_from_main_page(driver):
         print("TimeoutException: Не удалось выполнить определенные шаги в тесте.")
         print(e)
 
-
 def test_login_from_registration_page(driver):
     driver.get("https://stellarburgers.nomoreparties.site/register")
     try:
@@ -46,7 +45,6 @@ def test_login_from_registration_page(driver):
     except TimeoutException as e:
         print("TimeoutException: Не удалось выполнить определенные шаги в тесте.")
         print(e)
-
 
 def test_login_from_password_recovery_page(driver):
     driver.get("https://stellarburgers.nomoreparties.site/password-reset")

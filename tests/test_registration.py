@@ -35,7 +35,6 @@ def test_success_registration(driver):
         print("TimeoutException: Не удалось выполнить определенные шаги в тесте регистрации.")
         print(e)
 
-
 def test_wrong_password_registration(driver):
     driver.get("https://stellarburgers.nomoreparties.site/register")
     try:
