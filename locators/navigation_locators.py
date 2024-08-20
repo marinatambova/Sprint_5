@@ -1,22 +1,9 @@
-# Локаторы для навигации
+from selenium.webdriver.common.by import By
 
-# Кнопка перехода в личный кабинет
-PERSONAL_CABINET_BUTTON = "a[href='/account']"
-
-# Кнопка перехода в конструктор
-CONSTRUCTOR_BUTTON = "a[href='/constructor']"
-
-# Логотип Stellar Burgers
-LOGO_BUTTON = "img[alt='Stellar Burgers']"
-
-# Раздел "Булки"
-BUNS_SECTION_BUTTON = "span.text_type_buns"
-
-# Раздел "Соусы"
-SAUCES_SECTION_BUTTON = "span.text_type_sauces"
-
-# Раздел "Начинки"
-FILLINGS_SECTION_BUTTON = "span.text_type_mains"
-
-# Кнопка "Выйти"
-LOGOUT_BUTTON = "button.logout"
+# Navigation Locators
+PERSONAL_CABINET_BUTTON = (By.CSS_SELECTOR, "a[href='/account']")
+CONSTRUCTOR_BUTTON = (By.CSS_SELECTOR, "a[href='/constructor']")
+LOGO_BUTTON = (By.CSS_SELECTOR, ".app-header__logo")
+BUNS_SECTION_BUTTON = (By.CSS_SELECTOR, ".constructor-section.buns")
+SAUCES_SECTION_BUTTON = (By.CSS_SELECTOR, ".constructor-section.sauces")
+FILLINGS_SECTION_BUTTON = (By.CSS_SELECTOR, ".constructor-section.fillings")

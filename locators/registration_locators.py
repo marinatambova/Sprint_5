@@ -1,13 +1,7 @@
+from selenium.webdriver.common.by import By
+
 # Локаторы для страницы регистрации
-
-# Поле для ввода имени
-REG_NAME_INPUT = "input[name='name']"
-
-# Поле для ввода email
-REG_EMAIL_INPUT = "input[name='email']"
-
-# Поле для ввода пароля
-REG_PASSWORD_INPUT = "input[name='password']"
-
-# Кнопка "Зарегистрироваться"
-REG_SUBMIT_BUTTON = "button[type='submit']"
+REG_NAME_INPUT = (By.NAME, "name")
+REG_EMAIL_INPUT = (By.NAME, "email")
+REG_PASSWORD_INPUT = (By.NAME, "password")
+REG_SUBMIT_BUTTON = (By.CSS_SELECTOR, "button[type='submit']")

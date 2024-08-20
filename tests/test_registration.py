@@ -2,7 +2,7 @@ import pytest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-from locators import *  # Изменение на абсолютный путь
+from locators.registration_locators import *  # Абсолютный путь для импорта локаторов
 
 def test_success_registration(driver):
     driver.get("https://stellarburgers.nomoreparties.site/register")
