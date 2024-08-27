@@ -15,4 +15,4 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/yourusername/Sprint_5.git
+   git clone https://github.com/marinatambova/Sprint_5.git

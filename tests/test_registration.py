@@ -2,10 +2,12 @@ import pytest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-from locators import *  # Изменение на абсолютный путь
+from selenium.webdriver.common.by import By
+from sprint_5.locators.locators import *  # Абсолютный путь для импортов
+from sprint_5.config import BASE_URL  # Импорт BASE_URL из config.py
 
 def test_success_registration(driver):
-    driver.get("https://stellarburgers.nomoreparties.site/register")
+    driver.get(f"{BASE_URL}/register")
     try:
         name_input = WebDriverWait(driver, 30).until(
             EC.presence_of_element_located(REG_NAME_INPUT)
@@ -35,9 +37,8 @@ def test_success_registration(driver):
         print("TimeoutException: Не удалось выполнить определенные шаги в тесте регистрации.")
         print(e)
 
-
 def test_wrong_password_registration(driver):
-    driver.get("https://stellarburgers.nomoreparties.site/register")
+    driver.get(f"{BASE_URL}/register")
     try:
         name_input = WebDriverWait(driver, 30).until(
             EC.presence_of_element_located(REG_NAME_INPUT)
